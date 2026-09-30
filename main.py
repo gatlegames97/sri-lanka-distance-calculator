@@ -21,8 +21,8 @@ earth_circumference = 6371.2
 
 address = input("Enter the address you are currently at: \n")
 
-#location = nom.geocode(address)
-location = geolocator.geocode(address)
+location = nom.geocode(address)
+#location = geolocator.geocode(address)
 user_latitude = location.latitude
 user_longitude = location.longitude
 
