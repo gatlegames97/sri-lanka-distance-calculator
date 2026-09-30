@@ -15,6 +15,7 @@ def geocode(geocoder, config, query):
     location = geolocator.geocode(query)
     return location.address
 
+geopy.geocoders.options.default_user_agent = "sri-lanka-calculator")
 
 
 import contextlib
