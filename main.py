@@ -15,7 +15,7 @@ with contextlib.suppress(ImportError):
     input = window.prompt
 
 geolocator = Nominatim(user_agent="sri-lanka-calculator")
-#nom=Nominatim(domain='localhost:8000', scheme='http')
+nom=Nominatim(domain='gatlegames97.github.io/bearblocks.github.io', scheme='https')
 
 earth_circumference = 6371.2
 
@@ -29,7 +29,7 @@ user_longitude = location.longitude
 
 
 #user_latitude = float(input("Enter your latitude: \n"))
-#ser_longitude = float(input("Enter your longitude: \n"))
+#user_longitude = float(input("Enter your longitude: \n"))
 
 
 sri_lanka_latitude = 7.608085
