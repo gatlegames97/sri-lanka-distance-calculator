@@ -5,6 +5,7 @@
 # Purpose: Take the usere's position and display their distance to Sri Lanka
 ###################################
 
+import geopy.geocoders
 import math
 #from geopy.geocoders import Nominatim
 from geopy.geocoders import get_geocoder_for_service
