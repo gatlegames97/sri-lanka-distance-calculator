@@ -7,6 +7,15 @@
 
 import math
 from geopy.geocoders import Nominatim
+from geopy.geocoders import get_geocoder_for_service
+
+def geocode(geocoder, config, query):
+    cls = get_geocoder_for_service(geocoder)
+    geolocator = cls(**config)
+    location = geolocator.geocode(query)
+    return location.address
+
+
 
 import contextlib
 
@@ -21,7 +30,8 @@ earth_circumference = 6371.2
 
 address = input("Enter the address you are currently at: \n")
 
-location = nom.geocode(address)
+#location = nom.geocode(address)
+location = geocode("nominatim", dict(user_agent="specify_your_app_name_here"), address)
 #location = geolocator.geocode(address)
 user_latitude = location.latitude
 user_longitude = location.longitude
