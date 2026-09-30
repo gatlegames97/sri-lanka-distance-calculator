@@ -35,7 +35,7 @@ packages = ["geopy", "ssl"]
 
 # Make PyScript to try to automagically handle code where one would require
 # to use create_proxy (this is Pyodide specific)
-experimental_create_proxy = "auto"
+# experimental_create_proxy = "auto"
 
 ## Please use the official documentation for further explanation and examples
 # of how to use these features if they are unfamiliar to you.
