@@ -2,47 +2,20 @@
 # Example Distance Calculator
 # Aaron Brumwell
 # September 28th, 2026n
-# Purpose: Take the usere's position and display their distance to Sri Lanka
+# Purpose: Take the user's position and display their distance to Sri Lanka
 ###################################
 
-import geopy.geocoders
 import math
-#from geopy.geocoders import Nominatim
-from geopy.geocoders import get_geocoder_for_service
-
-def geocode(geocoder, config, query):
-    cls = get_geocoder_for_service(geocoder)
-    geolocator = cls(**config)
-    location = geolocator.geocode(query)
-    return location.address
-
-geopy.geocoders.options.default_user_agent = 'sri-lanka-calculator'
-
-
 import contextlib
 
 with contextlib.suppress(ImportError):
     from pyscript import window
     input = window.prompt
 
-geolocator = Nominatim(user_agent="sri-lanka-calculator")
-#nom=Nominatim(domain='gatlegames97.github.io/bearblocks.github.io', scheme='https')
-
 earth_circumference = 6371.2
 
-address = input("Enter the address you are currently at: \n")
-
-#location = nom.geocode(address)
-location = geocode("nominatim", dict(user_agent="sri-lanka-calculator"), address)
-#location = geolocator.geocode(address)
-user_latitude = location.latitude
-user_longitude = location.longitude
-
-
-
-#user_latitude = float(input("Enter your latitude: \n"))
-#user_longitude = float(input("Enter your longitude: \n"))
-
+user_latitude = float(input("Enter your latitude: \n"))
+user_longitude = float(input("Enter your longitude: \n"))
 
 sri_lanka_latitude = 7.608085
 sri_lanka_longitude =  80.704727
